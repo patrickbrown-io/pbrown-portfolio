@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect'
 const styles = {
   bigImg: {
     width:'100%',
-    maxHeight:'75%'
+    maxHeight:'100%',
   },
   imgWrapper: {
     position:'relative',
