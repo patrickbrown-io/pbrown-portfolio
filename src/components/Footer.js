@@ -88,8 +88,9 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
           style={styles.navlink}   
-          href="https://patrickbrown-io.github.io/patrick-brown-portfolio/assets/Patrick%20Brown%20-%20Web%20Developer.pdf"
+          href="src\patrickbrown-resume.pdf"
           onClick={() => console.log('Projects')}
+          download
         >
           <FontAwesomeIcon style={styles.iconStyle}icon={faFile}/>
         </a>
