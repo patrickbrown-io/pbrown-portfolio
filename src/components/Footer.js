@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faFile } from '@fortawesome/free-regular-svg-icons';
 
 // We declare an object called styles that will contain a few objects for card and heading styles
 const styles = {
@@ -45,7 +48,10 @@ const styles = {
     color: 'white',
     padding: '0.5% 2%',
     textDecoration: 'none'
-}
+},
+  iconStyle: {
+    color:'white'
+  }
 
 };
 
@@ -63,7 +69,7 @@ function Footer() {
           href="https://github.com/patrickbrown-io"
           onClick={() => console.log("hi!")}
         >
-          Github
+          <FontAwesomeIcon style={styles.iconStyle}icon={faGithub}/>
         </a>
       </li>
       <li className="nav-item" style={styles.ul}>
@@ -74,7 +80,7 @@ function Footer() {
           href="https://www.linkedin.com/in/patrick-brown-9930a365/"
           onClick={() => console.log('About')}
         >
-          LinkedIn
+          <FontAwesomeIcon style={styles.iconStyle}icon={faLinkedin}/>
         </a>
       </li>
       <li className="nav-item" style={styles.ul}>
@@ -85,19 +91,19 @@ function Footer() {
           href="https://patrickbrown-io.github.io/patrick-brown-portfolio/assets/Patrick%20Brown%20-%20Web%20Developer.pdf"
           onClick={() => console.log('Projects')}
         >
-          Resume
+          <FontAwesomeIcon style={styles.iconStyle}icon={faFile}/>
         </a>
       </li>
-      <li className="nav-item" style={styles.ul}>
+      {/* <li className="nav-item" style={styles.ul}>
         <a
           target="_blank"
           rel="noreferrer"
           style={styles.navlink}
           href="tel:8123229561"
         >
-          Call
+          <FontAwesomeIcon style={styles.iconStyle}icon={faPhone}/>
         </a>
-      </li>
+      </li> */}
       <li className="nav-item" style={styles.ul}>
         <a
           target="_blank"
@@ -107,7 +113,7 @@ function Footer() {
         >
 
 
-          Email
+          <FontAwesomeIcon style={styles.iconStyle}icon={faEnvelope}/>
 
 
         </a>
