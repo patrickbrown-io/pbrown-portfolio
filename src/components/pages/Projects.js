@@ -3,18 +3,39 @@ import React from 'react';
 const styles = {
   imageTile: {
     width:500,
-    height:'100%',
+    height:500,
     objectFit: 'contain',
-    maxWidth: '100%',
     backgroundSize:'cover'
 },
   buttons:{
     margin:'1%'
+  },
+  spanStyle:{
+    textAlign: 'center',
+    margin:'1%'
+  },
+  bottom:{
+    // marginBotton:'5%',
+    paddingBottom:'5%'
   }
 
 };
   //  Array of Project Objects
 const projectData = [
+    {
+    name: 'NFTy',
+    description: 'A Full-Stack NFT Marketplace Project | Javascript, Handlebars, Express.js, Express Session, mySQL',
+    href:'https://project2-nfty.herokuapp.com/',
+    repo:'https://github.com/patrickbrown-io/NFTy',
+    img: 'https://patrickbrown-io.github.io/patrick-brown-portfolio/assets/nfty-screenshot.png'
+  },
+  {
+    name: 'NFTy',
+    description: 'A Full-Stack NFT Marketplace Project | Javascript, Handlebars, Express.js, Express Session, mySQL',
+    href:'https://project2-nfty.herokuapp.com/',
+    repo:'https://github.com/patrickbrown-io/NFTy',
+    img: 'https://patrickbrown-io.github.io/patrick-brown-portfolio/assets/nfty-screenshot.png'
+  },
   {
     name: 'NFTy',
     description: 'A Full-Stack NFT Marketplace Project | Javascript, Handlebars, Express.js, Express Session, mySQL',
@@ -49,21 +70,24 @@ const projectData = [
 export default function Projects(props) {
   return ( 
     <>
-    <h2>Projects</h2>
+    <span style={styles.spanStyle}>
+    <h2>Javascript Projects</h2>
     <p>Here you can find some of my latest projects</p>
-    <div className="d-flex justify-content-center flex-row align-items-center align-content-center">
+    </span>
+    <div className="justify-content-center flex-column align-content-center">
       {projectData.map((project) => (
         <div className="card flex">
         <img style={styles.imageTile} className="card-img-top" src={project.img} alt="Card image cap"/>
         <div className="card-body">
         <h5 className="card-title">{project.name}</h5>
         <p className="card-text">{project.description}.</p>
-        <a href={project.href} style={styles.buttons} class="btn btn-primary" target="_blank" rel="noreferrer">Deployed</a>
-        <a href={project.href} style={styles.buttons}class="btn btn-primary" target="_blank" rel="noreferrer">Code Repo</a>
+        <a href={project.href} style={styles.buttons} class="btn btn-dark" target="_blank" rel="noreferrer">Deployed</a>
+        <a href={project.href} style={styles.buttons}class="btn btn-dark-outline" target="_blank" rel="noreferrer">Code Repo</a>
       </div>
       </div>
       ))}
     </div>
+    <div style={styles.bottom}></div>
     </>
   );
 }

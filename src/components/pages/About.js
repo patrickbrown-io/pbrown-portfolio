@@ -7,17 +7,26 @@ const styles = {
     fontStyle:'thick'
 },
   littleImg: {
+    marginBottom:'1%',
     width:300,
     height:'100%',
     objectFit: 'contain',
     alignItems:'center',
     justifyContent:'center'
-  }
+  },
+    spanStyle:{
+    textAlign: 'center',
+    margin:'1%'
+  },
 }
 
 export default function About() {
   return (
     <>
+    <span style={styles.spanStyle}>
+    <h2>About Me</h2>
+    </span>
+
     <div className="d-flex justify-content-center flex-column align-items-center align-content-center">
         <img className="card-img-top" style={styles.littleImg} src="https://media-exp1.licdn.com/dms/image/C4E03AQG3tQ4GX-RDgQ/profile-displayphoto-shrink_800_800/0/1592799089030?e=1638403200&v=beta&t=JQmthvZNeKn8jvvV5BdduLYYcoGAzu-lB1Ad-BzWQYA" alt="A handsome young web developer"/>
         <p className="card-text">My Name is Pat and I make things. After a 7 year career making marketing content, I started my journey web-development and was immediately attracted to the challenge.</p>
